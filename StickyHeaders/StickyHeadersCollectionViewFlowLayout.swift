@@ -40,7 +40,7 @@ class StickyHeadersCollectionViewFlowLayout: UICollectionViewFlowLayout {
         for section in sectionsToAdd {
             let indexPath = IndexPath(item: 0, section: section)
 
-            if let sectionAttributes = self.layoutAttributesForSupplementaryView(ofKind: UICollectionElementKindSectionHeader, at: indexPath) {
+            if let sectionAttributes = self.layoutAttributesForSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, at: indexPath) {
                 newLayoutAttributes.append(sectionAttributes)
             }
         }
