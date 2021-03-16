@@ -1,3 +1,5 @@
+SWIFT 5 compatible
+
 ### How to Add Sticky Section Headers to a Collection View
 
 #### Author: Bart Jacobs

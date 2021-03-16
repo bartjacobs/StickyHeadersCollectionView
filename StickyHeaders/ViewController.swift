@@ -46,7 +46,7 @@ class ViewController: UIViewController {
 
         // Register XIB for Supplementary View Reuse
         let XIB = UINib.init(nibName: "SectionHeader", bundle: Bundle.main)
-        collectionView.register(XIB, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: HeaderIdentifier)
+        collectionView.register(XIB, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderIdentifier)
 
         // Add as Subview
         view.addSubview(collectionView)
@@ -85,7 +85,7 @@ extension ViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         // Dequeue Reusable Supplementary View
-        if let supplementaryView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: HeaderIdentifier, for: indexPath) as? SectionHeader {
+        if let supplementaryView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderIdentifier, for: indexPath) as? SectionHeader {
             // Configure Supplementary View
             supplementaryView.backgroundColor = .random()
             supplementaryView.titleLabel.text = "Section \(indexPath.section)"
